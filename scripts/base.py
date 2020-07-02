@@ -326,8 +326,12 @@ def set_cwd(dir):
 def git_update(repo, is_no_errors=False):
   print("[git] update: " + repo)
   url = "https://github.com/ONLYOFFICE/" + repo + ".git"
+  if repo == "server"
+    url = "https://github.com/AdamGuan/" + repo + ".git"
   if config.option("git-protocol") == "ssh":
     url = "git@github.com:ONLYOFFICE/" + repo + ".git"
+    if repo == "server"
+      url = "git@github.com:AdamGuan/" + repo + ".git"
   folder = get_script_dir() + "/../../" + repo
   is_not_exit = False
   if not is_dir(folder):
